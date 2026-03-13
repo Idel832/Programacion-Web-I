@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Validar Num.Perfecto</title>
+    </head>
+    <body>
+        <header>
+            <h1>Validar si un numero es perfecto en consola</h1>
+        </header>
+
+        
+        <script>
+            function esPerfecto(numero){
+            let suma = 0;
+            for (let i=1; i < numero; i++){
+                if (numero % i ===0){
+                    suma +=i;
+                }
+            }
+            if (suma === numero){
+                return true;
+            } else {
+                return false;
+            }
+        }
+            console.log(esPerfecto(6))
+        </script>
+
+        <footer>
+            &copy; 2026 Tarea MT-2024-00222 | Todos los derechos reservados
+        </footer>
+    </body>
+</html>

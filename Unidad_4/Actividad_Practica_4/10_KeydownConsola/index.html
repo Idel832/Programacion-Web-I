@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Evento keydown</title>
+    </head>
+    <body>
+        <header>
+            <h1>Registro de teclas presionadas en consola.</h1>
+        </header>
+
+        <input type="text" id="CampoTexto" placeholder="Escriba en este campo">
+        <hr>
+
+        <script>
+            let input = document.getElementById("CampoTexto");
+
+            input.addEventListener("keydown", function(event){
+                console.log("La tecla presionada fue:..."+ event.key);
+            });
+        </script>
+
+        <footer>
+            &copy; 2026 Tarea MT-2024-00222 | Todos los derechos reservados
+        </footer>
+    </body>
+</html>

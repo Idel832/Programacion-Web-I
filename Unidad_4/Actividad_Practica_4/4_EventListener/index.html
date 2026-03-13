@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <title>addEventListener</title>
+    </head>
+    <body>
+        <header>
+            <h1>Cambiar el color de fondo al darle al botón</h1>
+        </header>
+
+        <button id="CambiarColor">Cambiar color de fondo</button>
+
+        <script>
+            let boton = document.getElementById("CambiarColor")
+            
+            boton.addEventListener("click", function(){
+                document.body.style.backgroundColor = "blue"
+            });
+        </script>
+
+        <footer>
+            &copy; 2026 Tarea MT-2024-00222 | Todos los derechos reservados
+        </footer>
+    </body>
+</html>
