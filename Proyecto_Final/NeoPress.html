@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Noticias</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Verificar y cargar Dark/Light mode guardado -->
+    <script>
+        if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark-mode");
+        }
+    </script>
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg newspaper-navbar">
+    <div class="container">
+
+        <!-- LOGO -->
+        <a class="navbar-brand fw-bold" href="#">
+            <img src="assets/img/logos/Logo_Main.png" alt="NeoPress" height="100">
+        </a>
+        
+
+        <!-- BOTÓN MOBILE -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="menu">
+
+            <!-- MENÚ CENTRADO -->
+            <ul class="navbar-nav mx-auto newspaper-menu">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Inicio</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        Secciones
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Deportes</a></li>
+                        <li><a class="dropdown-item" href="#">Tecnología</a></li>
+                        <li><a class="dropdown-item" href="#">Salud</a></li>
+                        <li><a class="dropdown-item" href="#">Economía</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tendencias</a>
+                </li>
+
+            </ul>
+            <br>
+
+            <!-- DERECHA -->
+            <div class="d-flex align-items-center gap-3">
+
+                <input class="form-control form-control-sm newspaper-search" type="text" placeholder="Buscar...">
+
+                <img src="assets/img/misc/Search_orange.png" class="icon-img" alt="Buscar">
+                <img src="assets/img/misc/User_orange.png" class="icon-img" alt="Usuario">
+
+                <img id="darkToggle" src="assets/img/misc/Moon_darkmode.png" class="icon-img" alt="Cambiar tema">
+            </div>
+
+        </div>
+    </div>
+</nav>
+<!-- ================= HERO + SIDEBAR ================= -->
+<div class="container mt-4">
+    <div class="row">
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="col-md-8">
+
+            <div class="hero mb-4 position-relative text-white">
+                <img src="assets/img/news/Primeraplana.jpg" class="img-fluid w-100 hero-img">
+
+                <!-- Overlay -->
+                <div class="hero-overlay"></div>
+
+                <!-- Contenido primera plana -->
+                <div class="hero-content">
+                    <span class="badge bg-danger mb-2">EXCLUSIVA</span>
+                    <h2>Gobierno anuncia nuevo plan de reforma energética</h2>
+                    <p>La iniciativa busca estabilizar el sistema eléctrico nacional con inversiones en energías renovables y modernización del sistema.</p>
+                </div>
+            </div>
+
+            <!-- Contenido complementario -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="noticia mb-3 text-center">
+                        <img src="assets/img/news/novedad.png" class="img-fluid rounded mb-2">
+                        <h6>App dominicana optimiza rutas de transporte en tiempo real</h6>
+                        <p class="small">La herramienta utiliza inteligencia artificial para reducir tiempos de viaje y mejorar la movilidad urbana.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="noticia mb-3 text-center">
+                        <img src="assets/img/news/internacional.jpg" class="img-fluid rounded mb-2">
+                        <h6>Mercados globales reaccionan ante incertidumbre económica en EE.UU.</h6>
+                        <p class="small">Las bolsas registran volatilidad mientras inversionistas evalúan posibles cambios en las políticas monetarias.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN DEPORTE-->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5>Deportes</h5>
+                <a href="#">Ver más</a>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="noticia mb-3 text-center">
+                        <img src="assets/img/news/deportes1.png" class="img-fluid rounded mb-2">
+                        <h6>El Escogido asegura victoria en un juego decisivo de la temporada</h6>
+                        <p class="small">Un cierre intenso definió el encuentro en los últimos minutos ante un estadio lleno.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="noticia mb-3 text-center">
+                        <img src="assets/img/news/deportes2.jpg" class="img-fluid rounded mb-2">
+                        <h6>Selección nacional se prepara para torneo internacional</h6>
+                        <p class="small">El equipo afina estrategias con nuevos talentos convocados para la competencia.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="noticia mb-3 text-center">
+                        <img src="assets/img/news/deportes3.jpg" class="img-fluid rounded mb-2">
+                        <h6>Jugador estrella regresa tras lesión y cambia el ritmo del equipo</h6>
+                        <p class="small">Su desempeño fue clave en la remontada durante el segundo tiempo.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="noticia mb-3 text-center">
+                        <img src="assets/img/news/deportes4.jpg" class="img-fluid rounded mb-2">
+                        <h6>Entrenador destaca disciplina como clave del éxito reciente</h6>
+                        <p class="small">El cuerpo técnico atribuye los resultados a una preparación constante y enfoque táctico.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN TECNOLOGIA-->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5>Tecnología</h5>
+                <a href="#">Ver más</a>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="noticia mb-3 text-center">
+                        <img src="assets/img/news/tecno1.jpg" class="img-fluid rounded mb-2">
+                        <h6>Nueva actualización mejora el rendimiento de dispositivos móviles</h6>
+                        <p class="small">Usuarios reportan mayor duración de batería y mejor respuesta del sistema.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="noticia mb-3 text-center">
+                        <img src="assets/img/news/tecno2.jpg" class="img-fluid rounded mb-2">
+                        <h6>OpenAI en números rojos</h6>
+                        <p class="small">Se proyecta que la empresa tendría pérdidas que alcancen los $14 mil millones en 2026 y un posible déficit de efectivo para 2027.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN SALUD -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5>Salud</h5>
+                <a href="#">Ver más</a>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="noticia mb-3 text-center">
+                        <img src="assets/img/news/salud1.jpg" class="img-fluid rounded mb-2">
+                        <h6>Especialistas recomiendan mejorar hábitos de sueño para la salud mental</h6>
+                        <p class="small">Dormir correctamente impacta de forma positiva en marcadores asociados a condiciones como la depresión.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="noticia mb-3 text-center">
+                        <img src="assets/img/news/salud2.jpg" class="img-fluid rounded mb-2">
+                        <h6>Aumenta interés en alimentación balanceada entre jóvenes</h6>
+                        <p class="small">Nuevas tendencias promueven dietas más naturales y sostenibles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN ECONOMIA -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5>Economía</h5>
+                <a href="#">Ver más</a>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="noticia mb-3 text-center">
+                        <img src="assets/img/news/eco1.jpg" class="img-fluid rounded mb-2">
+                        <h6>Precios de los combustibles registran variaciones esta semana</h6>
+                        <p class="small">Autoridades anuncian ajustes que impactarán el transporte y el consumo.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="noticia mb-3 text-center">
+                        <img src="assets/img/news/eco2.jpg" class="img-fluid rounded mb-2">
+                        <h6>Pequeños negocios impulsan recuperación económica local</h6>
+                        <p class="small">El crecimiento del comercio independiente fortalece la economía comunitaria.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="col-md-4">
+
+            <!-- A LA CARTA -->
+            <div class="sidebar mb-4">
+                <h6>🔥 A la carta</h6>
+                <div class="d-flex mb-2">
+                        <img src="assets/img/news/carta1.jpg" class="rounded me-2">
+                        <p class="small mb-0">Nueva medida impacta el tránsito en la capital<br>
+                            <span class="text-muted">Hace 12 mins</span></p>
+                </div>
+                <div class="d-flex mb-2">
+                        <img src="assets/img/news/carta2.jpg" class="rounded me-2">
+                        <p class="small mb-0">Vigilia por primer aniversario de la tragedia del Jet Set<br>
+                            <span class="text-muted">Hace 27 mins</span></p>
+                </div>
+                <div class="d-flex mb-2">
+                        <img src="assets/img/news/carta3.jpg" class="rounded me-2">
+                        <p class="small mb-0">Clima inestable afecta varias regiones<br>
+                            <span class="text-muted">Hace 1h</span></p>
+                </div>
+            </div>
+
+            <!-- TENDENCIAS -->
+            <div class="sidebar mb-4">
+                <h6>⚡ Tendencias</h6>
+                <div class="d-flex mb-2">
+                        <img src="assets/img/news/tendencia1.png" class="rounded me-2">
+                        <p class="small mb-0">Deportes<br>
+                            <span class="text-muted">Leones del Escogido contra los Toros del Este</span></p>
+                </div>
+                <div class="d-flex mb-2">
+                        <img src="assets/img/news/tendencia2.jpg" class="rounded me-2">
+                        <p class="small mb-0">Tecnología<br>
+                            <span class="text-muted">OpenClaw, un agente de IA de código abierto</span></p>
+                </div>
+                <div class="d-flex mb-2">
+                        <img src="assets/img/news/tendencia3.jpg" class="rounded me-2">
+                        <p class="small mb-0">Economía<br>
+                            <span class="text-muted">Se prevé un nuevo aumento en el precio de la gasolina</span></p>
+                </div>
+            </div>
+
+            <!-- MÁS LEÍDOS -->
+            <div class="sidebar mb-4">
+                <h6>⭐ Más leídos</h6>
+                <div class="d-flex mb-2">
+                        <img src="assets/img/news/ml1.jpg" class="rounded me-2">
+                        <p class="small mb-0">Tecnologías que transforman la vida cotidiana<br>
+                            <span class="text-muted">1.3M</span></p>
+                </div>
+                <div class="d-flex mb-2">
+                        <img src="assets/img/news/ml2.jpg" class="rounded me-2">
+                        <p class="small mb-0">Consejos para mejorar la productividad diaria<br>
+                            <span class="text-muted">744.2K</span></p>
+                </div>
+                <div class="d-flex mb-2">
+                        <img src="assets/img/news/ml3.jpg" class="rounded me-2">
+                        <p class="small mb-0">Cómo calcular y ahorrar en el consumo eléctrico de tu hogar<br>
+                            <span class="text-muted">320K</span></p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="mt-5 p-4">
+    <div class="container">
+        <div class="row text-center text-md-start g-4">
+
+            <div class="form col-md-4 mb-3">
+                <h6>Boletín de noticias</h6>
+                <p class="small">¡Mantente siempre informado suscribiéndote a nuestro boletín!</p>
+                <div class="d-flex gap-2">
+                    <input type="email" required class="form-control form-control-sm newsletter-input" placeholder="Correo electrónico">
+                    <button class="btn btn-sm btn-accent">Suscribir</button>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3 text-center">
+                <h6>Contáctanos</h6>
+                <p>Ave. Aquella #15, Distrito Nacional, RD</p>
+                <a href="mailto:contacto@neopress.com?">
+                    <p>contacto@neopress.com</p>
+                </a>
+                <p>Teléfono: +x(xxx)-xxx-xxxx</p>
+                <br>
+                <h6>También puedes encontrarnos en...</h6>
+                <div class="social-icons">
+                    <a href="https://x.com/NeoPress">
+                        <img src="assets/img/Footer/X_icon.png" class="foot_social_icon-img" alt="@NeoPress en X">
+                    </a>
+                    <a href="https://www.facebook.com/NeoPress">
+                        <img src="assets/img/Footer/Facebook_icon.png" class="foot_social_icon-img" alt="neopress en Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/neopress/">
+                        <img src="assets/img/Footer/Instagram_icon.png" class="foot_social_icon-img" alt="neopress en Instagram">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <h6>Aplicaciones disponibles</h6>
+                <a href="https://www.apple.com/us/search/NeoPress?src=serp">
+                    <img src="assets/img/Footer/AppStore.png" class="foot_AppD_icon-img" alt="AppStore">
+                </a>
+                <br>
+                <a href="https://play.google.com/store/search?q=NeoPress&c=apps">
+                    <img src="assets/img/Footer/GooglePlay.png" class="foot_AppD_icon-img" alt="GooglePlay">
+                </a>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-3">
+            <small>© Copyright 2026 MT-2024-00222 | Todos los derechos reservados.</small>
+        </div>
+    </div>
+</footer>
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="jquery/main.js"></script>
+</body>
+</html>
